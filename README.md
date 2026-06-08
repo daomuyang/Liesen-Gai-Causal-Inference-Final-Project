@@ -5,21 +5,35 @@ Final project for a causal inference course: estimating the causal effect of phy
 ## Repository structure
 
 ```
-├── data/
-│   └── cardio_train.csv          # Ulianova dataset (70,000 raw records)
+Liesen-Gai-Causal-Inference-Final-Project/
+├── README.md
 ├── code/
-│   └── analysis.py               # Main reproducible pipeline
+│   └── analysis.py                 # Main analysis pipeline (reproduces all results)
+├── data/
+│   └── cardio_train.csv            # Ulianova dataset (70,000 raw records; analysis input)
 ├── output/
-│   ├── summary.json              # Summary metrics
-│   ├── report_metrics.json       # Formatted values for the report
-│   └── ...                       # Other CSV/JSON outputs
-├── figures/                      # Report figures (PDF)
-├── report/
-│   └── final_pj_en.tex           # English report source (pdfLaTeX)
-└── FinalPJ_Liesen_Gai.pdf        # Compiled English report
+│   ├── summary.json                # Summary metrics
+│   ├── report_metrics.json         # Formatted values for the report
+│   ├── estimates.csv               # ACE estimates (all methods)
+│   ├── balance.csv                 # Covariate balance (SMD)
+│   ├── heterogeneity.csv           # Age-stratified IPW results
+│   ├── adjustment_sensitivity.csv  # Adjustment-set sensitivity
+│   └── mediation_sensitivity.csv   # Mediation sensitivity scan
+├── figures/
+│   ├── forest_plot.pdf             # Forest plot of ACE estimates
+│   ├── ps_overlap.pdf              # Propensity score overlap (positivity)
+│   ├── love_plot.pdf               # Covariate balance (love plot)
+│   ├── mediation_decomp.pdf        # BMI mediation decomposition
+│   ├── mediation_sensitivity.pdf   # Mediation rho sensitivity
+│   ├── age_heterogeneity.pdf       # Age-stratified effects
+│   ├── effect_modification.pdf     # Smoking effect modification
+│   └── adjustment_sensitivity.pdf  # Adjustment-set sensitivity
+└── report/
+    ├── final_pj_en.tex             # English report source (pdfLaTeX)
+    └── final_pj_en.pdf             # Compiled English report
 ```
 
-**Note:** Legacy UCI Heart Disease files under `data/` (if present locally) are not used in this analysis.
+**Note:** This repository contains the English report and all materials needed to reproduce the analysis. The analysis uses `data/cardio_train.csv` only.
 
 ## Requirements
 
