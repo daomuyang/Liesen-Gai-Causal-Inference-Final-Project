@@ -30,7 +30,8 @@ Liesen-Gai-Causal-Inference-Final-Project/
 │   └── adjustment_sensitivity.pdf  # Adjustment-set sensitivity
 └── report/
     ├── final_pj_en.tex             # English report source (pdfLaTeX)
-    └── final_pj_en.pdf             # Compiled English report
+    ├── final_pj_en.pdf             # Compiled English report
+    └── references.bib              # BibTeX bibliography (all cited references)
 ```
 
 **Note:** This repository contains the English report and all materials needed to reproduce the analysis. The analysis uses `data/cardio_train.csv` only.
