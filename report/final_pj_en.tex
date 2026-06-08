@@ -500,16 +500,19 @@ Fig. & Filename & Content \\
 
 Complete project materials (dataset, analysis scripts, numerical output, figures, and LaTeX report source) are available at the public GitHub repository:
 
-\noindent\href{https://github.com/daomuyang/Liesen-Gai-Causal-Inference-Final-Project}{\nolinkurl{https://github.com/daomuyang/}\newline \nolinkurl{Liesen-Gai-Causal-Inference-Final-Project}}.
+\noindent\href{https://github.com/daomuyang/Liesen-Gai-Causal-Inference-Final-Project}{
+  GitHub: Liesen-Gai-Causal-Inference-Final-Project
+}.
 
 \subsection{Repository Structure}
 
 \begin{verbatim}
 Liesen-Gai-Causal-Inference-Final-Project/
-|-- data/
-|   `-- cardio_train.csv      # Ulianova (70,000 raw rows)
+|-- README.md
 |-- code/
 |   `-- analysis.py           # main pipeline
+|-- data/
+|   `-- cardio_train.csv      # Ulianova (70,000 raw rows)
 |-- output/
 |   |-- summary.json
 |   |-- report_metrics.json
@@ -517,9 +520,10 @@ Liesen-Gai-Causal-Inference-Final-Project/
 |   |-- balance.csv
 |   `-- ...
 |-- figures/                  # report figures (PDF)
-|-- report/
-|   `-- final_pj_en.tex       # LaTeX source (English)
-`-- FinalPJ_Liesen_Gai.pdf    # compiled report PDF
+`-- report/
+    |-- final_pj_en.tex       # LaTeX source (English)
+    |-- final_pj_en.pdf       # compiled report PDF
+    `-- references.bib        # BibTeX bibliography
 \end{verbatim}
 
 \subsection{Clone and Reproduce}
