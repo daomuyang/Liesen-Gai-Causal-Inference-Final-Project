@@ -1,0 +1,35 @@
+\contentsline {section}{\numberline {1}Background and Research Questions}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Field Context and Prior Evidence}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Limitations of Observational Research and Position of This Study}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Data, Estimand, and Causal Structure}{2}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Identification Assumptions and Estimation Principles}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Identification Assumptions}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Estimation Principles}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Total Effect Estimation and Interpretation}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Crude Comparison and the Need for Adjustment}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}ACE Estimates from Seven Methods}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Why Multiple Methods Converge}{8}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Positivity Assessment: Propensity Score Overlap}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Common Support and Distributional Overlap}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Identification Implications Under High Activity Prevalence}{9}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Covariate Balance and IPW Validity}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Balance Principle of IPW Weighting}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Covariate Differences Before and After Weighting}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Implications of Balance Diagnostics for Section~3 ACE}{12}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Mechanism Analysis: BMI Mediation Path}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Mediation Estimands and Identification Framework}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}BMI Path Decomposition Results}{13}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Comparison with Literature and Blood Pressure Mediation}{14}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Mediation Sensitivity Analysis}{14}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Heterogeneity, Adjustment Specifications, and Unmeasured Confounding}{15}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Age-Stratified Heterogeneity}{15}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Effect Modification by Smoking}{15}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Adjustment Set Specification Sensitivity}{16}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}E-Value and Unmeasured Confounding}{17}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Conclusions and Limitations}{17}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Main Conclusions}{17}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Limitations and Outlook}{18}{subsection.8.2}%
+\contentsline {section}{\numberline {A}Figure and Table Index}{18}{appendix.A}%
+\contentsline {section}{\numberline {B}Code Repository and Reproduction Instructions}{19}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Repository Structure}{19}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Clone and Reproduce}{19}{subsection.B.2}%
