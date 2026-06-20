@@ -4,10 +4,12 @@
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\indep}{\perp\!\!\!\perp}
 \usepackage{booktabs}
+\usepackage{longtable}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, positioning}
 \usepackage{float}
+\usepackage{needspace}
 \usepackage{cite}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \hypersetup{pdfborder={0 0 0},breaklinks=true,linktoc=all}
@@ -289,12 +291,16 @@ where $\bar L^w$ is the weighted mean and $s_j$ the pooled standard deviation. E
 
 Balance diagnostics test whether backdoor paths on measured $L$ are blocked, not whether exchangeability holds. With unobserved $U$, even perfect balance on $L$ may leave $Y(a)\indep A\mid L$ violated---Section~7 E-value quantifies how strong $U$ would need to be to explain away Section~3 estimates \cite{vanderweele2017evalue}.
 
+\Needspace{14cm}
 \subsection{Covariate Differences Before and After Weighting}
 
 Table~\ref{tab:balance_full} and Figure~\ref{fig:love} report SMD for seven adjustment covariates. Before weighting, active and inactive groups differ systematically: smoking ($|\mathrm{SMD}|=0.065$) and alcohol (0.065) show the largest differences, with higher prevalence among active individuals---consistent with Section~3.1 confounding direction; BMI (0.035), age (0.026), cholesterol (0.022), glucose (0.020) also differ visibly; sex (0.014) is smallest but nonzero. These differences explain why crude and adjusted ACE differ: without weighting, backdoor paths $A\leftarrow L\to Y$ are not blocked \cite{hernan2024whatif}.
 
 After IPW weighting, all seven covariates have $|\mathrm{SMD}|<0.003$ (gender 0.001, smoke/alco $<0.001$, BMI 0.003, gluc 0.002, age/cholesterol $<0.001$). Maximum imbalance compresses from 0.065 to under 0.003, a reduction exceeding 95\%. In the pseudo-population, $A$ and $L$ are approximately independent, showing the logistic propensity model $\hat e(L)$ successfully achieves post-weighting covariate balance---direct evidence that IPW operates effectively as a backdoor adjustment tool \cite{chen2024iptw}.
 
+\begingroup
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+\begin{samepage}
 \begin{table}[H]
 \centering
 \caption{SMD for all adjustment covariates before and after IPW weighting}
@@ -313,13 +319,15 @@ Sex (gender)        & $+0.014$ & $+0.001$ \\
 \bottomrule
 \end{tabular}
 \end{table}
-
+\vspace{-0.3em}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.88\textwidth]{../figures/love_plot.pdf}
+\includegraphics[width=0.72\textwidth]{../figures/love_plot.pdf}
 \caption{Covariate SMD before and after IPW weighting. Red dashed lines indicate $\pm 0.1$ thresholds.}
 \label{fig:love}
 \end{figure}
+\end{samepage}
+\endgroup
 
 \subsection{Implications of Balance Diagnostics for Section~3 ACE}
 
@@ -494,6 +502,63 @@ Fig. & Filename & Content \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\section{Notation}
+\label{app:notation}
+
+\small
+\begin{longtable}{@{}clp{8.2cm}@{}}
+\caption{Summary of main notation used in the text}\label{tab:notation} \\
+\toprule
+Symbol & Name & Meaning \\
+\midrule
+\endfirsthead
+\multicolumn{3}{c}{\small Table~\thetable{} (continued)} \\
+\toprule
+Symbol & Name & Meaning \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+$N$ & Sample size & Analysis sample after cleaning ($N=68{,}392$) \\
+$n$ & Subgroup size & Number of observations in a stratum or treatment arm \\
+$i$ & Individual index & Index for unit $i$ \\
+$A$, $A_i$ & Treatment & Binary physical activity ($A=1$ active, $A=0$ inactive) \\
+$Y$, $Y_i$ & Outcome & CVD diagnosis indicator ($Y=1$ if diseased) \\
+$Y(a)$, $Y_i(a)$ & Potential outcome & Outcome under treatment level $a$ \\
+$L$ & Covariate set & Adjustment set (age, sex, smoking, alcohol, cholesterol, glucose, BMI, etc.) \\
+$M$ & Mediator & BMI (separated from $L$ in mechanism analysis) \\
+$U$ & Unmeasured factor & Unobserved confounding (e.g., family history, diet) \\
+$l$ & Covariate value & A realization of $L$ \\
+$\mathrm{ACE}$ & Average causal effect & $\E[Y(1)-Y(0)]$, measured as risk difference \\
+$\mathrm{NDE}$ & Natural direct effect & Effect of activity when the $A\to M$ path is blocked \\
+$\mathrm{NIE}$ & Natural indirect effect & Effect transmitted through $M$ \\
+$\mathrm{TE}$ & Total effect & $\mathrm{NDE}+\mathrm{NIE}$ \\
+$\mathrm{SMD}_j$ & Standardized mean difference & Balance metric for covariate $j$ before/after weighting \\
+$\mathrm{RR}$ & Risk ratio & Ratio of risks in treated vs.\ control groups \\
+$a$ & $A\to M$ path coefficient & Effect of activity on BMI in mediation decomposition \\
+$b$ & $M\to Y$ path coefficient & Effect of BMI on CVD given $L\setminus M$ \\
+$\E[\cdot]$ & Expectation & Population or potential-outcome average \\
+$\P(\cdot)$ & Probability & Probability measure \\
+$\indep$ & Conditional independence & Statistical independence given conditioning variables \\
+$e(L)$ & Propensity score & $\P(A=1\mid L)$ \\
+$\pi(L)$ & Propensity score & Same as $e(L)$, i.e., $\P(A=1\mid L)$ \\
+$\hat e(L)$, $\hat\pi(L)$ & Estimated propensity score & $\widehat{\P}(A=1\mid L)$ from logistic regression \\
+$\mu(a,L)$ & Outcome regression & $\E[Y\mid A=a,L]$ \\
+$\hat\mu(a,L)$ & Estimated outcome model & Fitted $\E[Y\mid A,L]$ \\
+$\hat\psi(a)$ & AIPW individual estimate & Individual-level contribution in doubly robust estimation \\
+$w_i$ & IPW weight & Stabilized inverse-probability weight \\
+$\bar L^w$ & Weighted mean & IPW-weighted sample mean of a covariate \\
+$s_j$ & Pooled SD & Denominator used in SMD calculation \\
+$p_0$, $p_1$ & Risk & CVD prevalence in inactive/active groups \\
+$\rho$ & Sensitivity parameter & Correlation of mediator/outcome model residuals \\
+$\rho_{\text{tip}}$ & Tipping point & Critical $\rho$ at which NIE is nullified \\
+$ap\_hi$, $ap\_lo$ & Blood pressure & Systolic/diastolic pressure (robustness analysis) \\
+$I(A=a)$ & Indicator function & Equals 1 if $A=a$, else 0 \\
+\end{longtable}
+\normalsize
 
 \section{Code Repository and Reproduction Instructions}
 \label{app:repo}
