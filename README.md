@@ -1,4 +1,4 @@
-# Liesen-Gai Causal Inference Final Project
+# Liesen Gai's Causal Inference Final Project
 
 Final project for a causal inference course: estimating the causal effect of physical activity on cardiovascular disease (CVD) using the Ulianova Kaggle dataset, with positivity diagnostics, covariate balance, BMI mediation, and sensitivity analyses.
 
@@ -7,6 +7,7 @@ Final project for a causal inference course: estimating the causal effect of phy
 ```
 Liesen-Gai-Causal-Inference-Final-Project/
 ├── README.md
+├── 期末PJ_盖烈森23307130013.pdf
 ├── code/
 │   └── analysis.py                 # Main analysis pipeline (reproduces all results)
 ├── data/
